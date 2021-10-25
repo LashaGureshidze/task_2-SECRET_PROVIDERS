@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>ONE-TIME MESSAGING SERVICE</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<a th:href="@{/login}">login</a>
+<a th:href="@{/logout}">logout</a>
+<h1>ONE-TIME MESSAGING SERVICE</h1>
+<form action="#" th:action="@{/secret/send}" th:object="${secretDto}" method="post">
+    <p>Message: <input type="text" th:field="*{secretString}" required="true"/></p>
+    <p><input type="submit" value="Submit" /> </p>
+</form>
+
+<p th:text="${secretDto.link}"> <a th:href="${secretDto.link}" >  </a>  </p>
+</body>
+</html>

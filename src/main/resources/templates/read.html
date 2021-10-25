@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>ONE-TIME MESSAGING SERVICE</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<a th:href="@{/login}">login</a>
+<a th:href="@{/logout}">logout</a>
+<h1>ONE-TIME MESSAGING SERVICE</h1>
+<p th:text="'secret message: ' + ${secretDto.secretString}" />
+</body>
+</html>
